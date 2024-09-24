@@ -1,15 +1,17 @@
-import React from 'react'
-import Navbar from "./components/navigation/Navbar"
-import Router from "./Router"
-import Signup from "./task/task"
+import React from "react";
+import Navbar from "./components/navigation/Navbar";
+import Router from "./Router";
+import Signup from "./task/task";
+import { Footer } from "./pages/footer";
 const App = () => {
   return (
     <div>
-      <Navbar/>
-        {/* <Signup/> */}
-      <Router/>
+      <Navbar />
+      {/* <Signup/> */}
+      <Router />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

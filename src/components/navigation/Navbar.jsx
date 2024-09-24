@@ -5,12 +5,22 @@ const Navbar = () => {
   const navBar = [
     { id: 1, name: "Home", link: "/Home" },
     { id: 2, name: "Jobs", link: "/Jobs" },
+
+    {
+      id: 4,
+      name: "Carrier Advice",
+      link: "/carrier",
+    },
+    {
+      id: 5,
+      name: "Sector",
+      link: "/sector",
+    },
     { id: 3, name: <MdDashboard />, link: "/Dashboard" },
-    
   ];
 
   return (
-    <div className="bg-white text-gray-950 shadow-md fixed w-full top-0 left-0 z-50">
+    <div className="bg-white text-gray-950 shadow-md fixed w-full top-0 left-0 z-50 ">
       <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
         <h2 className="text-2xl font-semibold">
           <Link
@@ -35,7 +45,7 @@ const Navbar = () => {
             ))}
             <li>
               <Link
-                to= "/LoginForm"
+                to="/LoginForm"
                 className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
               >
                 Login
