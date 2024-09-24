@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import Jobs from "./pages/Jobs";
+import Home from "./pages/home/Home";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Jobs from "./pages/jobs/Jobs";
 import LoginForm from "./components/forms/LoginForm";
 import ResisterForm from "./components/forms/ResisterForm";
 
@@ -13,8 +13,6 @@ function Routers() {
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/LoginForm" element={<LoginForm />} />
       <Route path="/ResisterForm" element={<ResisterForm />} />
-
-
     </Routes>
   );
 }
