@@ -1,8 +1,8 @@
 import React from "react";
 import { Header } from "../../components/home/header";
 import Navbar from "../../components/navigation/Navbar";
-import { Card } from "../../components/home/card";
-import { Lover } from "../../components/home/lover";
+import { Card } from "../../components/home/Card";
+import Lover from "../../components/home/Lover";// Adjust the path if necessary
 import Articles from "../articles/articles";
 import { useSelector } from "react-redux";
 
@@ -22,16 +22,20 @@ const Home = () => {
         ))}
       </div>
       <Lover />
-      <div className="bg-slate-200  py-8  ">
-        <div className="flex justify-center text-5xl">Recent Listing</div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div className="flex justify-center m-auto bg-red-500 w-52 rounded-md ">
-          <button className="py-3 px-7 ">EXPLORE ALL JOBS</button>
+      <div className="bg-slate-200 py-12">
+        <div className="flex justify-center text-5xl font-bold text-gray-800 mb-8">
+          Recent Listings
+        </div>
+
+        <div className="flex justify-center mb-8">
+          <div className="bg-red-500 rounded-md shadow-lg transition-transform transform hover:scale-105">
+            <button className="py-3 px-7 text-white font-semibold rounded-md transition-colors duration-200 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300">
+              EXPLORE ALL JOBS
+            </button>
+          </div>
         </div>
       </div>
+
       <Articles />
       <Lover />
     </div>

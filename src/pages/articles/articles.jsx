@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../../components/home/card";
+import { Card } from "../../components/home/Card";
 import { useSelector } from "react-redux";
 
 const Articles = () => {
@@ -8,7 +8,7 @@ const Articles = () => {
   return (
     <div>
       <div className=" flex justify-center text-4xl py-3">
-        Find the job first
+        Find your First job
       </div>
       <div className="grid grid-cols-3">
         {articles.map(({ id, jobTitle, jobDescription }) => (
