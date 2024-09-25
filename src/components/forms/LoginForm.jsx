@@ -60,7 +60,7 @@ const LoginForm = () => {
             Login
           </button>
         </form>
-        <Link to="/ResisterForm" className="text-red-400 text-sm">
+        <Link to="/ResisterForm" className="text-red-400 text-xl">
           Click me to Resister{" "}
         </Link>
       </div>

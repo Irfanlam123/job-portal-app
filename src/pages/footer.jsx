@@ -14,7 +14,7 @@ export const Footer = () => {
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Flowbite
+                  FindJob
                 </span>
               </a>
             </div>
@@ -26,7 +26,7 @@ export const Footer = () => {
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
                     <a href="https://flowbite.com" className="hover:underline">
-                      Flowbite
+                      Jobs
                     </a>
                   </li>
                   <li>
@@ -34,7 +34,7 @@ export const Footer = () => {
                       href="https://tailwindcss.com/"
                       className="hover:underline"
                     >
-                      Tailwind CSS
+                      Carrier Advice
                     </a>
                   </li>
                 </ul>
@@ -49,7 +49,7 @@ export const Footer = () => {
                       href="https://github.com/themesberg/flowbite"
                       className="hover:underline "
                     >
-                      Github
+                      Sector
                     </a>
                   </li>
                   <li>
@@ -86,7 +86,7 @@ export const Footer = () => {
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2022{" "}
               <a href="https://flowbite.com" className="hover:underline">
-                Flowbite™
+                Findjob™
               </a>
               . All Rights Reserved.
             </span>
