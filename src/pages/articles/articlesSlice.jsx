@@ -1,72 +1,53 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
-  {
-    id: 1,
-    jobTitle: "Software Engineer",
-    jobDescription:
-      "Design, develop, and maintain software applications using modern programming languages.",
-  },
-  {
-    id: 2,
-    jobTitle: "Data Analyst",
-    jobDescription:
-      "Analyze large datasets to derive insights and provide business intelligence solutions.",
-  },
-  {
-    id: 3,
-    jobTitle: "Project Manager",
-    jobDescription:
-      "Plan, execute, and manage projects ensuring that they meet deadlines and budget constraints.",
-  },
-  {
-    id: 4,
-    jobTitle: "UX/UI Designer",
-    jobDescription:
-      "Create user-friendly and visually appealing interfaces for websites and applications.",
-  },
-  {
-    id: 5,
-    jobTitle: "DevOps Engineer",
-    jobDescription:
-      "Automate and streamline operations to improve deployment efficiency and infrastructure stability.",
-  },
-  {
-    id: 6,
-    jobTitle: "Marketing Specialist",
-    jobDescription:
-      "Develop and implement marketing strategies to promote products and services effectively.",
-  },
-  {
-    id: 7,
-    jobTitle: "HR Manager",
-    jobDescription:
-      "Oversee human resource functions, including recruitment, employee relations, and compliance.",
-  },
-  {
-    id: 8,
-    jobTitle: "Full Stack Developer",
-    jobDescription:
-      "Work on both the frontend and backend development of web applications.",
-  },
-  {
-    id: 9,
-    jobTitle: "Content Writer",
-    jobDescription:
-      "Create engaging content for websites, blogs, and social media platforms.",
-  },
-  {
-    id: 10,
-    jobTitle: "IT Support Specialist",
-    jobDescription:
-      "Provide technical assistance to users, troubleshoot hardware and software issues.",
-  },
-];
+// Initial state
+const initialState = {
+  articles: [],
+  loading: false,
+  error: null,
+};
 
+// Create the async thunk for fetching data
+export const fetchUserData = createAsyncThunk(
+  "articles/fetchUserData",
+  async () => {
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const jsonData = await response.json();
+      return jsonData.slice(0, 10);
+    } catch (error) {
+      return Promise.reject(error.message);
+    }
+  }
+);
+
+// Create the slice
 const articleSlice = createSlice({
   name: "articles",
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchUserData.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchUserData.fulfilled, (state, action) => {
+        state.loading = false;
+        state.articles = action.payload;
+        console.log("Fetched data:", action.payload); // Console log here
+      })
+      .addCase(fetchUserData.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+        console.error("Error fetching data:", action.error.message); // Console log here
+      });
+  },
 });
 
 export default articleSlice.reducer;
