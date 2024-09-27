@@ -25,8 +25,13 @@ const Navbar = () => {
         <h2 className="text-2xl font-semibold">
           <Link
             to="/Home"
-            className="hover:text-blue-400 transition-colors duration-300"
+            className="hover:text-blue-400 transition-colors duration-300 flex"
           >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-8"
+              alt="FlowBite Logo"
+            />
             FindJob
           </Link>
         </h2>

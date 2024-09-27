@@ -9,9 +9,9 @@ const LoginForm = () => {
     e.preventDefault();
 
     console.log("Email:", email);
-    console.log("Password", password);
+    console.log("Password:", password);
 
-    // for clear the input field
+    // Clear the input fields
     setEmail("");
     setPassword("");
   };
@@ -60,8 +60,8 @@ const LoginForm = () => {
             Login
           </button>
         </form>
-        <Link to="/ResisterForm" className="text-red-400 text-sm">
-          Click me to Resister{" "}
+        <Link to="/ResisterForm" className="text-red-400 text-xl">
+          Click me to Resister
         </Link>
       </div>
     </div>

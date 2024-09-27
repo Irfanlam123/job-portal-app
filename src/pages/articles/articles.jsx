@@ -34,7 +34,7 @@ const Articles = () => {
   return (
     <div>
       <div className=" flex justify-center text-4xl py-3">
-        Find the job first
+        Find your First job
       </div>
       <div className="grid grid-cols-3">
         {data.map(({ id, title }) => (
