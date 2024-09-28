@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CardImage from "../../assets/cardImg.jpg";
+import CardImage from "../../../assets/cardImg.jpg";
 
 export const Card = ({ id, title, description, sectorName, numberOfJobs }) => {
   return (

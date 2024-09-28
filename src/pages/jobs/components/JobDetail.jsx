@@ -5,7 +5,7 @@ const JobDetail = () => {
   const { id } = useParams();
 
   return (
-    <div className="py-10">
+    <div className="py-56">
       <div>this cndwobfowifw wfnwoebfwoebf jebfi</div>
     </div>
   );
