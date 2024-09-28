@@ -6,7 +6,7 @@ import Jobs from "./pages/jobs/Jobs";
 import LoginForm from "./components/forms/LoginForm";
 import ResisterForm from "./components/forms/ResisterForm";
 import Lover from "./components/home/Lover"; // Correct import
-import JobDetail from "./pages/jobs/JobDetail"; // Import JobDetail component
+import {JobDetail} from "./pages/jobs/JobDetail"; // Import JobDetail component
 
 function Routers() {
   return (

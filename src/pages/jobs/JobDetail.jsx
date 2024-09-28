@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchJobById } from "../../api/jobApi";
+// import { fetchJobById } from "../../api/jobApi";
 
-const JobDetail = () => {
+export const JobDetail = () => {
   const { id } = useParams();
   const [jobDetail, setJobDetail] = useState(null);
 
@@ -25,4 +25,4 @@ const JobDetail = () => {
     </div>
   );
 };
-export default JobDetail;
+// export default JobDetail;
