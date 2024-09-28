@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import LoginForm from "./pages/forms/LoginForm";
 import ResisterForm from "./pages/forms/ResisterForm";
 import Jobs from "./pages/jobs/Jobs";
+import Carrier from "./pages/carrieradvice/carrier";
 
 function Routers() {
   return (
@@ -13,6 +14,7 @@ function Routers() {
       <Route path="/login" element={<LoginForm />} />
       <Route path="/ResisterForm" element={<ResisterForm />} />
       <Route path="/jobs" element={<Jobs />} />{" "}
+      <Route path="/carrier/:id" element={<Carrier />} />
     </Routes>
   );
 }

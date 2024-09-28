@@ -6,7 +6,7 @@ const JobDetail = () => {
 
   return (
     <div className="py-56">
-      <div>this cndwobfowifw wfnwoebfwoebf jebfi</div>
+      <div>this cndwobfowifw wfnwoebfwoebf jebfi{id}</div>
     </div>
   );
 };
