@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "../../components/home/card";
+import { Card } from "./components/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserData } from "./articlesSlice";
 

@@ -1,25 +1,28 @@
 import React from "react";
 import { Header } from "../../components/home/header";
 import Navbar from "../../components/navigation/Navbar";
-import { Card } from "../../components/home/Card";
-import Lover from "../../components/home/Lover";// Adjust the path if necessary
+// import { Card } from "../../components/home/Card";
+import Lover from "../../components/home/Lover"; // Adjust the path if necessary
 import Articles from "../articles/articles";
 import { useSelector } from "react-redux";
 
 const Home = () => {
   const home = useSelector((state) => state.home);
+  const homeId = useSelector((state) => state.home.id);
+  console.log("homeid", homeId);
 
   return (
     <div className="mt-16">
       <Header />
       <div className="grid grid-cols-3">
-        {home.map(({ id, sectorName, numberOfJobs }) => (
+        {/* {home.map(({ id, sectorName, numberOfJobs }) => (
           <Card
             key={id} // unique key for each item
+            id={id}
             sectorName={sectorName} // destructured title
             numberOfJobs={numberOfJobs} // destructured description
           />
-        ))}
+        ))} */}
       </div>
       <Lover />
       <div className="bg-slate-200 py-12">

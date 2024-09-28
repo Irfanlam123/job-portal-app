@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CardImage from "../../assets/cardImg.jpg";
+import CardImage from "../../../assets/cardImg.jpg";
 
 export const Card = ({ id, title, description, sectorName, numberOfJobs }) => {
+  console.log("card ki id ", id);
   return (
     <div className="flex justify-center my-4">
       <div className="max-w-sm rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105">
@@ -15,7 +16,7 @@ export const Card = ({ id, title, description, sectorName, numberOfJobs }) => {
             {description ? description : numberOfJobs}
           </p>
           <div className="flex justify-center">
-            <Link to={`/job/${id}`}>
+            <Link to={`/jobs/${id}`}>
               <div className="bg-red-500 py-2 px-4 font-semibold text-white rounded-lg cursor-pointer transition duration-200 hover:bg-red-600 transform hover:scale-105">
                 <p className="text-lg text-center">Read More {`--->`}</p>
               </div>
