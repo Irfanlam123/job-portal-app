@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../../components/home/header";
 import Navbar from "../../components/navigation/Navbar";
-// import { Card } from "../../components/home/Card";
+import { Card } from "../../components/home/Card";
 import Lover from "../../components/home/Lover"; // Adjust the path if necessary
 import Articles from "../articles/articles";
 import { useSelector } from "react-redux";

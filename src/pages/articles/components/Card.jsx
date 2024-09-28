@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CardImage from "../../../assets/cardImg.jpg";
+import CardImage from "../../assets/cardImg.jpg";
 
 export const Card = ({ id, title, description, sectorName, numberOfJobs }) => {
-  console.log("card ki id ", id);
   return (
     <div className="flex justify-center my-4">
       <div className="max-w-sm rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105">
@@ -27,3 +26,4 @@ export const Card = ({ id, title, description, sectorName, numberOfJobs }) => {
     </div>
   );
 };
+export default Card;

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUserData } from "./articlesSlice";
 
 const Articles = () => {
+  // console.log("hsgfh article ki id ",id)
   const [data, setData] = useState([]);
   const articles = useSelector((state) => state.articles.articles);
   const loading = useSelector((state) => state.articles.loading); // Accessing loading state
@@ -39,7 +40,8 @@ const Articles = () => {
       <div className="grid grid-cols-3">
         {data.map(({ id, title }) => (
           <Card
-            key={id} // unique key for each item
+            key={id}
+            id={id} // unique key for each item
             title={title} // destructured title
             // description={jobDescription} // destructured description
           />
